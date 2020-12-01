@@ -1,0 +1,4 @@
+﻿  Test.c
+D:\project\c_code\Test\Test\Test.c(64): warning C4716: “doWhileExec01”: 必须返回一个值
+D:\project\c_code\Test\Test\Test.c(73): warning C4716: “testDoWhile”: 必须返回一个值
+  Test.vcxproj -> D:\project\c_code\Test\x64\Debug\Test.exe
