@@ -2,21 +2,90 @@
 
 #include <stdio.h>
 #include <string.h>
+#include <time.h>
 #include "Student.c"
 
 #define MAX 1000.05
 #define ADD(x,y) (x + y)
 
 int main() {
+	
+	numbersGame();
+}
 
+//猜数字游戏
+int numbersGame() {
+	typedef unsigned int u_int;
+
+	int condition = 0;
+
+
+	//初始化函数种子
+	int random = srand((u_int)time(0));
+
+	do
+	{
+		menu();
+		printf("%s", "请选择>:");
+		scanf("%d", &condition);
+
+		switch (condition) {
+		case 1:
+			printf("%s\n", "开始游戏");
+			game();
+			break;
+		case 2:
+			condition = 0;
+			printf("%s\n", "退出");
+			break;
+		default:
+			printf("%s\n", "暂无此选项");
+			break;
+
+		}
+
+	} while (condition);
+}
+
+int game() {
+	
+	//随机生成 0 -100
+	int random = rand() % 100 + 1;
+	printf("%s\n","请填写猜的数字>:");
+
+	while (1) {
+		int number = 0;
+		scanf("%d", &number);
+		if (number < random) {
+			printf("%s\n", "猜小了！");
+		}
+		else if (number > random) {
+			printf("%s\n", "猜大了！");
+		}
+		else {
+			printf("%s\n", "猜对了！");
+			break;
+		}
+	}
+	
+
+}
+
+int menu() {
+	printf("***************************\n");
+	printf("*** 1:开始猜数字 2:退出 ***\n");
+	printf("***************************\n");
+}
+
+int addNumber() {
 	int arr[8];
 	int offset = 0;
 	int count = 0;
 	int i = 0;
-	
-	input:scanf("%d", &i);
 
-	
+input:scanf("%d", &i);
+
+
 	if (i % 3 == 0 || i % 4 == 0) {
 		arr[offset] = i;
 		offset++;
@@ -35,7 +104,7 @@ int main() {
 	}
 
 	return 0;
-
+	return 0;
 }
 
 //计算 n 的阶乘

@@ -1,4 +1,12 @@
 ﻿  Test.c
-D:\project\c_code\Test\Test\Test.c(64): warning C4716: “doWhileExec01”: 必须返回一个值
-D:\project\c_code\Test\Test\Test.c(73): warning C4716: “testDoWhile”: 必须返回一个值
+D:\project\c_code\Test\Test\Test.c(13,13): warning C4013: “numbersGame”未定义；假设外部返回 int
+D:\project\c_code\Test\Test\Test.c(24,20): warning C4013: “srand”未定义；假设外部返回 int
+D:\project\c_code\Test\Test\Test.c(28,7): warning C4013: “menu”未定义；假设外部返回 int
+D:\project\c_code\Test\Test\Test.c(35,8): warning C4013: “game”未定义；假设外部返回 int
+D:\project\c_code\Test\Test\Test.c(53,19): warning C4013: “rand”未定义；假设外部返回 int
+D:\project\c_code\Test\Test\Test.c(48): warning C4716: “numbersGame”: 必须返回一个值
+D:\project\c_code\Test\Test\Test.c(78): warning C4716: “menu”: 必须返回一个值
+D:\project\c_code\Test\Test\Test.c(72): warning C4716: “game”: 必须返回一个值
+D:\project\c_code\Test\Test\Test.c(140): warning C4716: “testDoWhile”: 必须返回一个值
+D:\project\c_code\Test\Test\Test.c(131): warning C4716: “doWhileExec01”: 必须返回一个值
   Test.vcxproj -> D:\project\c_code\Test\x64\Debug\Test.exe
