@@ -21,5 +21,8 @@
     <ClCompile Include="Student.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="method.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

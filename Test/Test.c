@@ -8,12 +8,11 @@
 #define MAX 1000.05
 #define ADD(x,y) (x + y)
 
-int main() {
-	
-	numbersGame();
-}
+//int main() {
+//	
+//	numbersGame();
+//}
 
-//猜数字游戏
 int numbersGame() {
 	typedef unsigned int u_int;
 
@@ -31,8 +30,8 @@ int numbersGame() {
 
 		switch (condition) {
 		case 1:
-			printf("%s\n", "开始游戏");
-			game();
+			printf("%s\n", "开始");
+			start();
 			break;
 		case 2:
 			condition = 0;
@@ -47,10 +46,10 @@ int numbersGame() {
 	} while (condition);
 }
 
-int game() {
+int start() {
 	
 	//随机生成 0 -100
-	int random = rand() % 100 + 1;
+	int random = rand() % 1000 + 1;
 	printf("%s\n","请填写猜的数字>:");
 
 	while (1) {
