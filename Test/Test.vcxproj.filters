@@ -21,8 +21,19 @@
     <ClCompile Include="Student.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="method.c">
+    <ClCompile Include="Add.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="ArrayDemo.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Add.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ArrayDemo.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

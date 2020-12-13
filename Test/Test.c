@@ -4,14 +4,50 @@
 #include <string.h>
 #include <time.h>
 #include "Student.c"
+#include "Add.h"
+#include "ArrayDemo.h"
 
 #define MAX 1000.05
 #define ADD(x,y) (x + y)
 
-//int main() {
-//	
-//	numbersGame();
-//}
+int main() {
+	
+	char arr[] = "1234";
+	pointMove(arr);
+	
+	//conditionArrayAddr();
+
+
+	/*int arr[] = { 9,8,7,6,5,4,3,2,1,0 };
+
+	int arr1[] = { 0,1,2,3,4,5,6,7,8,9 };
+
+	int size = sizeof(arr1) / sizeof(int);
+
+	bubble_sort(arr1, size);
+
+	for (int x = 0; x < size; x++) {
+		printf("%d\n", arr1[x]);
+	}*/
+
+	//testDubbleArrayMemory();
+
+	//testDubbleArray02();
+
+	//LookArrayMemory();
+
+	//useArray();
+
+	//createArray();
+
+	/*int a = 5, b = 6;
+	swap(&a, &b);
+	printf("%d %d \n", a, b);*/
+
+	//printf("%d\n", Add(1, 2));
+
+	//numbersGame();
+}
 
 int numbersGame() {
 	typedef unsigned int u_int;

@@ -139,9 +139,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="method.c" />
+    <ClCompile Include="Add.c" />
+    <ClCompile Include="ArrayDemo.c" />
     <ClCompile Include="Student.c" />
     <ClCompile Include="Test.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Add.h" />
+    <ClInclude Include="ArrayDemo.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
