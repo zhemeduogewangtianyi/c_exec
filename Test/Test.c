@@ -12,8 +12,21 @@
 
 int main() {
 	
-	char arr[] = "1234";
-	pointMove(arr);
+	int range = 0;
+
+	reEnter:
+	printf("please enter number range >:");
+	scanf("%d",&range);
+
+	if (range < 1 || range > 10000) {
+		printf("number must in 1 - 10000 !\n");
+		goto reEnter;
+	}
+
+	return gameEnter(range);
+	
+	//char arr[] = "1234";
+	//pointMove(arr);
 	
 	//conditionArrayAddr();
 
@@ -55,26 +68,26 @@ int numbersGame() {
 	int condition = 0;
 
 
-	//³õÊ¼»¯º¯ÊıÖÖ×Ó
+	//åˆå§‹åŒ–å‡½æ•°ç§å­
 	int random = srand((u_int)time(0));
 
 	do
 	{
 		menu();
-		printf("%s", "ÇëÑ¡Ôñ>:");
+		printf("%s", "è¯·é€‰æ‹©>:");
 		scanf("%d", &condition);
 
 		switch (condition) {
 		case 1:
-			printf("%s\n", "¿ªÊ¼");
+			printf("%s\n", "å¼€å§‹");
 			start();
 			break;
 		case 2:
 			condition = 0;
-			printf("%s\n", "ÍË³ö");
+			printf("%s\n", "é€€å‡º");
 			break;
 		default:
-			printf("%s\n", "ÔİÎŞ´ËÑ¡Ïî");
+			printf("%s\n", "æš‚æ— æ­¤é€‰é¡¹");
 			break;
 
 		}
@@ -84,21 +97,21 @@ int numbersGame() {
 
 int start() {
 	
-	//Ëæ»úÉú³É 0 -100
+	//éšæœºç”Ÿæˆ 0 -100
 	int random = rand() % 1000 + 1;
-	printf("%s\n","ÇëÌîĞ´²ÂµÄÊı×Ö>:");
+	printf("%s\n","è¯·å¡«å†™çŒœçš„æ•°å­—>:");
 
 	while (1) {
 		int number = 0;
 		scanf("%d", &number);
 		if (number < random) {
-			printf("%s\n", "²ÂĞ¡ÁË£¡");
+			printf("%s\n", "çŒœå°äº†ï¼");
 		}
 		else if (number > random) {
-			printf("%s\n", "²Â´óÁË£¡");
+			printf("%s\n", "çŒœå¤§äº†ï¼");
 		}
 		else {
-			printf("%s\n", "²Â¶ÔÁË£¡");
+			printf("%s\n", "çŒœå¯¹äº†ï¼");
 			break;
 		}
 	}
@@ -108,7 +121,7 @@ int start() {
 
 int menu() {
 	printf("***************************\n");
-	printf("*** 1:¿ªÊ¼²ÂÊı×Ö 2:ÍË³ö ***\n");
+	printf("*** 1:å¼€å§‹çŒœæ•°å­— 2:é€€å‡º ***\n");
 	printf("***************************\n");
 }
 
@@ -142,7 +155,7 @@ input:scanf("%d", &i);
 	return 0;
 }
 
-//¼ÆËã n µÄ½×³Ë
+//è®¡ç®— n çš„é˜¶ä¹˜
 int forExec02(int x,int y) {
 
 	for (int i = 1; i <= y; i++) {
@@ -152,7 +165,7 @@ int forExec02(int x,int y) {
 	return 0;
 }
 
-//do while Á·Ï°
+//do while ç»ƒä¹ 
 int doWhileExec01() {
 
 	int i = 0;
@@ -174,7 +187,7 @@ int testDoWhile() {
 	} while (i < 10);
 }
 
-//for Á·Ï°1 -> c ÓÃ 0 or !0 ±êÊ¶ false true £¬ 0 false !0 true
+//for ç»ƒä¹ 1 -> c ç”¨ 0 or !0 æ ‡è¯† false true ï¼Œ 0 false !0 true
 int forExec01() {
 
 	int i = 0;
@@ -187,7 +200,7 @@ int forExec01() {
 	return 0;
 }
 
-//Ëæ±ãÊ¡ÂÔ±äÁ¿
+//éšä¾¿çœç•¥å˜é‡
 int moreVariableFor() {
 	
 	int count = 0;
@@ -217,7 +230,7 @@ int moreVariableFor() {
 	return 0;
 }
 
-//for ËÀÑ­»·
+//for æ­»å¾ªç¯
 
 int deadFor() {
 
@@ -229,16 +242,16 @@ int deadFor() {
 
 }
 
-//²âÊÔ c forÑ­»· + Ç°±Õºó¿ªĞ´·¨¡£
+//æµ‹è¯• c forå¾ªç¯ + å‰é—­åå¼€å†™æ³•ã€‚
 int testFor() {
 	for (int i = 0; i < 101; i++) {
 		if ((i & 1) == 0) {
 			if (i == 0) {
 				continue;
 			}
-			printf("Å¼Êı -> %d\n", i);
+			printf("å¶æ•° -> %d\n", i);
 		}else {
-			printf("ÆæÊı -> %d\n", i);
+			printf("å¥‡æ•° -> %d\n", i);
 		}
 		break;
 	}
@@ -266,11 +279,11 @@ int whileFilter() {
 
 }
 
-//ÀûÓÃ while Çå¿Õ»º³åÇø
+//åˆ©ç”¨ while æ¸…ç©ºç¼“å†²åŒº
 testBreak01() {
 	char password[10];
 	int ret = 0;
-	printf("ÇëÊäÈëÃÜÂë:>");
+	printf("è¯·è¾“å…¥å¯†ç :>");
 	scanf("%s", password);
 	int ch;
 
@@ -278,22 +291,22 @@ testBreak01() {
 		;
 	}
 
-	printf("ÇëÈ·ÈÏ(Y/N):>");
+	printf("è¯·ç¡®è®¤(Y/N):>");
 	ret = getchar();
 	if (ret == 'Y') {
-		printf("È·¶¨³É¹¦\n");
+		printf("ç¡®å®šæˆåŠŸ\n");
 	}
 	else {
-		printf("È·ÈÏÈ¡Ïû\n");
+		printf("ç¡®è®¤å–æ¶ˆ\n");
 	}
 
 }
 
-//CÓïÑÔ°æ±¾µÄ Scanner
+//Cè¯­è¨€ç‰ˆæœ¬çš„ Scanner
 int cScanner() {
 	int ch = 0;
 
-	//EOF -> END OF FILE ÎÄ¼ş½áÊø±êÖ¾
+	//EOF -> END OF FILE æ–‡ä»¶ç»“æŸæ ‡å¿—
 	while ((ch = getchar()) != EOF) {
 		putchar(ch);
 	}
@@ -301,14 +314,14 @@ int cScanner() {
 	return 0;
 }
 
-//¹¹½¨Ñ§Éú½á¹¹Ìå
+//æ„å»ºå­¦ç”Ÿç»“æ„ä½“
 int builderStudent() {
 	double performance_pay = 888.88;
 	double subsidy = 666.66;
 
 	double slaray = ADD(performance_pay, subsidy) + MAX;
 
-	char name[20] = "ÕÅÈı";
+	char name[20] = "å¼ ä¸‰";
 	int age = 18;
 
 	struct Student student;
@@ -316,7 +329,7 @@ int builderStudent() {
 	struct Student* pstu = &student;
 
 
-	strcpy(pstu->name, "ÕÅÈı");
+	strcpy(pstu->name, "å¼ ä¸‰");
 	pstu->age = age;
 	student.salary = slaray;
 	(*pstu).workTime = 40.8F;
