@@ -1,4 +1,11 @@
-﻿  Add.c
-D:\project\c_code\Test\Test\Add.c(19,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
-D:\project\c_code\Test\Test\Add.c(19,9): message : 请考虑在格式字符串中使用“%zd”
+﻿  TicTacToe.c
+D:\project\c_code\Test\Test\TicTacToe.c(16,16): warning C4013: “tictactoeMenu”未定义；假设外部返回 int
+D:\project\c_code\Test\Test\TicTacToe.c(23,22): warning C4013: “startTicTacToeGame”未定义；假设外部返回 int
+D:\project\c_code\Test\Test\TicTacToe.c(50,11): warning C4013: “initBoard”未定义；假设外部返回 int
+D:\project\c_code\Test\Test\TicTacToe.c(52,14): warning C4013: “disableBoard”未定义；假设外部返回 int
+D:\project\c_code\Test\Test\TicTacToe.c(58,13): warning C4013: “playerMove”未定义；假设外部返回 int
+D:\project\c_code\Test\Test\TicTacToe.c(60,14): warning C4013: “isWin”未定义；假设外部返回 int
+D:\project\c_code\Test\Test\TicTacToe.c(65,14): warning C4013: “computeMove”未定义；假设外部返回 int
+D:\project\c_code\Test\Test\TicTacToe.c(202,12): warning C4013: “isFull”未定义；假设外部返回 int
+D:\project\c_code\Test\Test\TicTacToe.c(178): warning C4716: “computeMove”: 必须返回一个值
   Test.vcxproj -> D:\project\c_code\Test\x64\Debug\Test.exe

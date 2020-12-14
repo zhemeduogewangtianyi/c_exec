@@ -27,12 +27,24 @@
     <ClCompile Include="ArrayDemo.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="GuessTheNumber.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="TicTacToe.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Add.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="ArrayDemo.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="GuessTheNumber.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TicTacToe.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

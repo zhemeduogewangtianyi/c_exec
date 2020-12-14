@@ -6,24 +6,19 @@
 #include "Student.c"
 #include "Add.h"
 #include "ArrayDemo.h"
+#include "GuessTheNumber.h"
+#include "TicTacToe.h"
 
 #define MAX 1000.05
 #define ADD(x,y) (x + y)
 
 int main() {
 	
-	int range = 0;
+	playTicTacToe();
 
-	reEnter:
-	printf("please enter number range >:");
-	scanf("%d",&range);
+	return 0;
 
-	if (range < 1 || range > 10000) {
-		printf("number must in 1 - 10000 !\n");
-		goto reEnter;
-	}
-
-	return gameEnter(range);
+	//return gameEnter();
 	
 	//char arr[] = "1234";
 	//pointMove(arr);
@@ -62,68 +57,68 @@ int main() {
 	//numbersGame();
 }
 
-int numbersGame() {
-	typedef unsigned int u_int;
-
-	int condition = 0;
-
-
-	//初始化函数种子
-	int random = srand((u_int)time(0));
-
-	do
-	{
-		menu();
-		printf("%s", "请选择>:");
-		scanf("%d", &condition);
-
-		switch (condition) {
-		case 1:
-			printf("%s\n", "开始");
-			start();
-			break;
-		case 2:
-			condition = 0;
-			printf("%s\n", "退出");
-			break;
-		default:
-			printf("%s\n", "暂无此选项");
-			break;
-
-		}
-
-	} while (condition);
-}
-
-int start() {
-	
-	//随机生成 0 -100
-	int random = rand() % 1000 + 1;
-	printf("%s\n","请填写猜的数字>:");
-
-	while (1) {
-		int number = 0;
-		scanf("%d", &number);
-		if (number < random) {
-			printf("%s\n", "猜小了！");
-		}
-		else if (number > random) {
-			printf("%s\n", "猜大了！");
-		}
-		else {
-			printf("%s\n", "猜对了！");
-			break;
-		}
-	}
-	
-
-}
-
-int menu() {
-	printf("***************************\n");
-	printf("*** 1:开始猜数字 2:退出 ***\n");
-	printf("***************************\n");
-}
+//int numbersGame() {
+//	typedef unsigned int u_int;
+//
+//	int condition = 0;
+//
+//
+//	//初始化函数种子
+//	int random = srand((u_int)time(0));
+//
+//	do
+//	{
+//		menu();
+//		printf("%s", "请选择>:");
+//		scanf("%d", &condition);
+//
+//		switch (condition) {
+//		case 1:
+//			printf("%s\n", "开始");
+//			start();
+//			break;
+//		case 2:
+//			condition = 0;
+//			printf("%s\n", "退出");
+//			break;
+//		default:
+//			printf("%s\n", "暂无此选项");
+//			break;
+//
+//		}
+//
+//	} while (condition);
+//}
+//
+//int start() {
+//	
+//	//随机生成 0 -100
+//	int random = rand() % 1000 + 1;
+//	printf("%s\n","请填写猜的数字>:");
+//
+//	while (1) {
+//		int number = 0;
+//		scanf("%d", &number);
+//		if (number < random) {
+//			printf("%s\n", "猜小了！");
+//		}
+//		else if (number > random) {
+//			printf("%s\n", "猜大了！");
+//		}
+//		else {
+//			printf("%s\n", "猜对了！");
+//			break;
+//		}
+//	}
+//	
+//
+//}
+//
+//int menu() {
+//	printf("***************************\n");
+//	printf("*** 1:开始猜数字 2:退出 ***\n");
+//	printf("***************************\n");
+//}
 
 int addNumber() {
 	int arr[8];

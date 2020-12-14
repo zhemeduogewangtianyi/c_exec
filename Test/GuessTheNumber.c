@@ -4,7 +4,18 @@
 #include <time.h>
 #include <stdio.h>
 
-int gameEnter(int range) {
+int gameEnter() {
+
+	int range = 0;
+
+	reEnter:
+	printf("please enter number range >:");
+	scanf("%d", &range);
+
+	if (range < 1 || range > 10000) {
+		printf("number must in 1 - 10000 !\n");
+		goto reEnter;
+	}
 	
 	int random = initRandomSpeed();
 
