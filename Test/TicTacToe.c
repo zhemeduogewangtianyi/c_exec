@@ -164,16 +164,17 @@ int computeMove(char board[ROW][COL]) {
 	printf("compute move >:\n");
 	int count = 0;
 	while (1) {
-		if (count == ROW * COL) {
-			break;
-		}
+		count++;
 		int x = rand() % ROW;
 		int y = rand() % COL;
 		if (board[x][y] == ' ') {
 			board[x][y] = '#';
 			break;
 		}
-		count++;
+		if (count == ROW * COL) {
+			break;
+		}
+		
 	}
 }
 

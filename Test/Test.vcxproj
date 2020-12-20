@@ -142,6 +142,7 @@
     <ClCompile Include="Add.c" />
     <ClCompile Include="ArrayDemo.c" />
     <ClCompile Include="GuessTheNumber.c" />
+    <ClCompile Include="MineClearAnce.c" />
     <ClCompile Include="Student.c" />
     <ClCompile Include="Test.c" />
     <ClCompile Include="TicTacToe.c" />
@@ -150,6 +151,7 @@
     <ClInclude Include="Add.h" />
     <ClInclude Include="ArrayDemo.h" />
     <ClInclude Include="GuessTheNumber.h" />
+    <ClInclude Include="MineClearAnce.h" />
     <ClInclude Include="TicTacToe.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

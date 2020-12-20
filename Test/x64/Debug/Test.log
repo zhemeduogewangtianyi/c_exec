@@ -1,11 +1,19 @@
-﻿  TicTacToe.c
-D:\project\c_code\Test\Test\TicTacToe.c(16,16): warning C4013: “tictactoeMenu”未定义；假设外部返回 int
-D:\project\c_code\Test\Test\TicTacToe.c(23,22): warning C4013: “startTicTacToeGame”未定义；假设外部返回 int
-D:\project\c_code\Test\Test\TicTacToe.c(50,11): warning C4013: “initBoard”未定义；假设外部返回 int
-D:\project\c_code\Test\Test\TicTacToe.c(52,14): warning C4013: “disableBoard”未定义；假设外部返回 int
-D:\project\c_code\Test\Test\TicTacToe.c(58,13): warning C4013: “playerMove”未定义；假设外部返回 int
-D:\project\c_code\Test\Test\TicTacToe.c(60,14): warning C4013: “isWin”未定义；假设外部返回 int
-D:\project\c_code\Test\Test\TicTacToe.c(65,14): warning C4013: “computeMove”未定义；假设外部返回 int
-D:\project\c_code\Test\Test\TicTacToe.c(202,12): warning C4013: “isFull”未定义；假设外部返回 int
-D:\project\c_code\Test\Test\TicTacToe.c(178): warning C4716: “computeMove”: 必须返回一个值
+﻿  Test.c
+D:\project\c_code\Test\Test\Test.c(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+D:\project\c_code\Test\Test\Test.c(42,19): warning C4013: “wildPointerDemo03”未定义；假设外部返回 int
+D:\project\c_code\Test\Test\Test.c(155,12): warning C4047: “函数”:“const char *const ”与“int”的间接级别不同
+D:\project\c_code\Test\Test\Test.c(155,9): warning C4024: “printf”: 形参和实参 1 的类型不同
+D:\project\c_code\Test\Test\Test.c(163,1): warning C4047: “初始化”:“int *”与“int (*)[1]”的间接级别不同
+D:\project\c_code\Test\Test\Test.c(187,1): warning C4047: “初始化”:“int *”与“int (*)[1]”的间接级别不同
+D:\project\c_code\Test\Test\Test.c(199,1): warning C4047: “初始化”:“char *”与“int (*)[1]”的间接级别不同
+D:\project\c_code\Test\Test\Test.c(214,1): warning C4133: “初始化”: 从“int *”到“char *”的类型不兼容
+D:\project\c_code\Test\Test\Test.c(244,22): warning C4013: “illegalFunc”未定义；假设外部返回 int
+D:\project\c_code\Test\Test\Test.c(275,9): warning C4477: “printf”: 格式字符串“%u”需要类型“unsigned int”的参数，但可变参数 2 拥有了类型“size_t”
+D:\project\c_code\Test\Test\Test.c(275,9): message : 请考虑在格式字符串中使用“%zu”
+D:\project\c_code\Test\Test\Test.c(276,9): warning C4477: “printf”: 格式字符串“%u”需要类型“unsigned int”的参数，但可变参数 2 拥有了类型“size_t”
+D:\project\c_code\Test\Test\Test.c(276,9): message : 请考虑在格式字符串中使用“%zu”
+D:\project\c_code\Test\Test\Test.c(277,9): warning C4477: “printf”: 格式字符串“%u”需要类型“unsigned int”的参数，但可变参数 2 拥有了类型“size_t”
+D:\project\c_code\Test\Test\Test.c(277,9): message : 请考虑在格式字符串中使用“%zu”
+D:\project\c_code\Test\Test\Test.c(150): warning C4172: 返回局部变量或临时变量的地址: a
+D:\project\c_code\Test\Test\Test.c(355): warning C4716: “testDoWhile”: 必须返回一个值
   Test.vcxproj -> D:\project\c_code\Test\x64\Debug\Test.exe

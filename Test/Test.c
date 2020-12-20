@@ -8,17 +8,42 @@
 #include "ArrayDemo.h"
 #include "GuessTheNumber.h"
 #include "TicTacToe.h"
+#include "MineClearAnce.h"
 
 #define MAX 1000.05
 #define ADD(x,y) (x + y)
 
 int main() {
 	
-	playTicTacToe();
+	//start_mine_clearance();
+
+	//playTicTacToe();
+
+	//return gameEnter();
+
+	//convertTypeDemo01();
+
+	//convertNumber();
+
+	//illegalConvert();
+
+	//illegalConvert02();
+
+	//illegalContert03();
+
+	//pointerDemo01();
+
+	//pointerDemo02();
+
+	//wildPionterDemo01();
+
+	//wildPointerDemo02();
+
+	wildPointerDemo03();
 
 	return 0;
 
-	//return gameEnter();
+	
 	
 	//char arr[] = "1234";
 	//pointMove(arr);
@@ -120,6 +145,154 @@ int main() {
 //	printf("***************************\n");
 //}
 
+int* wildPointer() {
+	int a = 10;
+	return &a;
+}
+
+int wildPointerDemo03() {
+	//指针指向的空间释放
+	int* pa = wildPointer();
+	printf(*pa);
+	return 0;
+}
+
+int wildPointerDemo02() {
+
+	//指针越界访问
+	int arr[] = { 0 };
+	int* pa = &arr;
+
+
+	for (int i = 0; i < 12; i++) {
+		//*(pa + i) = 1;
+	}
+
+	return 0;
+}
+
+int wildPionterDemo01() {
+
+	//局部变量未初始化的指针，默认值是随机的
+	//int* a;
+	//*a = 10;
+	//printf("%p\n", *a);
+	return 0;
+
+}
+
+int pointerDemo02() {
+
+	int arr[] = { 0 };
+	
+	int* pa = &arr;
+
+	for (int i = 0; i < 10; i++) {
+		*(pa + i) = 10;
+	}
+
+	for (int i = 0; i <10; i++) {
+		printf("pa -> %d\n", arr[i]);
+	}
+
+	int arr1[] = { 0 };
+
+	char* pc = &arr1;
+
+	for (int i = 0; i < 10; i++) {
+		*(pc + i) = 10;
+	}
+
+	for (int i = 0; i < 10; i++) {
+		printf("pc -> %d\n", arr1[i]);
+	}
+	return 0;
+}
+
+int pointerDemo01() {
+	int a = 0x11223344;
+	int* pa = &a;
+	char* pc = &a;
+
+	printf("%d\n", a);
+	printf("%p\n", pa);
+	printf("%p\n", pa + 1);
+	printf("%p\n", pc);
+	printf("%p\n", pc + 1);
+	return 0;
+}
+
+int illegalContert03() {
+	
+	int i = 1;
+	int a = (++i);
+	printf("%d\n", a);
+	int b = a + (++i);
+	printf("%d\n", b);
+	int c = b + (++i);
+	printf("%d\n",c);
+
+	int ii = 1;
+	int d = (++ii) + (++ii) + (++ii);
+	printf("%d\n", d);
+	return 0;
+}
+
+int illegalConvert02() {
+
+	int answer;
+
+	answer = illegalFunc(1) - illegalFunc(2) * illegalFunc(3);
+
+	printf("%d\n",answer);
+
+	return 0;
+
+}
+
+int illegalFunc(int sort) {
+
+	static int count = 1;
+
+	//int res = count++;
+	int res = ++count;
+
+	printf("res = %d -> %d\n",res,sort);
+
+	return res;
+}
+
+int illegalConvert() {
+
+	int i = 10;
+	i = i-- - --i * (i = -3) * i++ + ++i;
+	printf("%d\n",i);
+	return 0;
+}
+
+int convertTypeDemo01(){
+
+	char c = 1;
+	printf("%u -> %u\n",c,sizeof(c));
+	printf("%u -> %u\n",(+c),sizeof(+c));
+	printf("%u -> %u\n", (!c), sizeof(!c));
+	//结果有歧义，不可预测
+	int i = 1;
+	printf("%d\n", i + --i);
+	return 0;
+
+}
+
+//11 -> 15  15 -> 11
+int convertNumber() {
+	int a = 11;
+	a = a | (1 << 2);
+	printf("%d\n",a);
+	a = a & (~(1 << 2));
+	printf("%d\n", a);
+	return 0;
+}
+
 int addNumber() {
 	int arr[8];
 	int offset = 0;
@@ -170,7 +343,7 @@ int doWhileExec01() {
 		i++;
 		printf("%d\n", i);
 	} while (i < 10);
-
+	return 0;
 }
 
 //do while
